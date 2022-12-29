@@ -8842,11 +8842,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\5sem\\Тестирование\\11-12\\10\\10.csproj",
+      "projectUniqueName": "D:\\5sem\\Тестирование\\10 — копия\\10\\10.csproj",
       "projectName": "10",
-      "projectPath": "D:\\5sem\\Тестирование\\11-12\\10\\10.csproj",
+      "projectPath": "D:\\5sem\\Тестирование\\10 — копия\\10\\10.csproj",
       "packagesPath": "C:\\Users\\Computer\\.nuget\\packages\\",
-      "outputPath": "D:\\5sem\\Тестирование\\11-12\\10\\obj\\",
+      "outputPath": "D:\\5sem\\Тестирование\\10 — копия\\10\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Computer\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8931,7 +8931,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.307\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.308\\RuntimeIdentifierGraph.json"
       }
     }
   }

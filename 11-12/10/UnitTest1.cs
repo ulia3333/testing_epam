@@ -4,6 +4,7 @@ using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Edge;
 using System;
+using _10.Steps;
 
 namespace _10
 {
@@ -23,19 +24,9 @@ namespace _10
             driver = GetEdgeDriver();
             driver.Manage().Window.Maximize();
             driver.Navigate().GoToUrl("https://litnet.com/auth/login?classic=1&link=https%3A%2F%2Flitnet.com%2F");
-            
-            var AuthorizationPage = new AuthorizationPage(driver);
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(40);
-            AuthorizationPage.LogInPhone();
-            AuthorizationPage.LogInPasword();
-            AuthorizationPage.LogIn();
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(70);
-            var MyPage = new MyPage(driver);
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(100);
-            MyPage.GoToHome();
-
-
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(100);
+            var steps = new Steps.Steps(driver);
+            steps.Autorisation();
+            steps.MySite();
         }
 
         [TearDown]
@@ -44,30 +35,46 @@ namespace _10
             driver.Quit();
         }
 
+        ////test7
         [Test]
         public void ViewingBooksOfCertainGenreOfSelectedSubgenre()
         {
-            var HomePage = new HomePage(driver);
-            HomePage.OpenBooksSection();
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(100);
-            HomePage.ChooseGenre();
-            var GenrePage = new GenrePage(driver);
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(100);
-            GenrePage.ChooseSubgenre();
-            //Assert.Pass();
+            var steps = new Steps.Steps(driver);
+            steps.Wait();
+            steps.SectionBook();
+            steps.Wait();
+            steps.ChooseGenre();
+            steps.Wait();
+            steps.ChooseSubgenre();
         }
-
+        //test3
         [Test]
         public void SubscribeToTheAuthorOfTheSelectedBook()
         {
-            var HomePage = new HomePage(driver);
-            HomePage.SelectMyLibrarySection();
-            var MyLaibraryPage = new MyLaibraryPage(driver);
-            MyLaibraryPage.ChooseAuthor();
-            var AuthorPage = new AuthorPage(driver);
-            AuthorPage.TrackAuthor();
+            var steps = new Steps.Steps(driver);
+            steps.MyLibrorary();
+            steps.AuthorName();
+            steps.Sibscribe();
+        }
+        //test4
+        [Test]
+        public void UnsubscribeFromTheAuthor()
+        {
+            var steps = new Steps.Steps(driver);
+            steps.MyLibrorary();
+            steps.MyAvatar();
+            steps.ChooseFavouritAuthor();
+            steps.Unsubscribe();
+        }
 
-            //Assert.Pass();
+        //test5
+        [Test]
+        public void ViewingThePageOfTheSelectedAuthor()
+        {
+            var steps = new Steps.Steps(driver);
+            steps.SearchAuthor();
+            steps.GoToAuthorPage();
+            
         }
 
     }

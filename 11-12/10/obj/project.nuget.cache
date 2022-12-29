@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xA5ZlHdvoo9IJZJXtXveFgoudmsYwqr9YDmuojvTLF+C4vB2z0b0Aab5vjbBOZWp8qwXksA+O3QHLmDgZUtX2g==",
+  "dgSpecHash": "9/oD3SPs/BgTmQLefMg6czDERktmF30I1CMEDd+rNiVGPhHIbD26TUoOm0vnkY0Q7VLbMjrjK2lgNCuCgLBAaQ==",
   "success": true,
-  "projectFilePath": "D:\\5sem\\Тестирование\\11-12\\10\\10.csproj",
+  "projectFilePath": "D:\\5sem\\Тестирование\\10 — копия\\10\\10.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Computer\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\Computer\\.nuget\\packages\\docker.dotnet\\3.125.12\\docker.dotnet.3.125.12.nupkg.sha512",
